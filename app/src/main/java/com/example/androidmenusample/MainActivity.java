@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -28,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.navigation_drawer_activity){
             Toast.makeText(MainActivity.this, "Click the top left icon to display menu.", Toast.LENGTH_LONG).show();
             startActivity(new Intent(MainActivity.this, NavigationDrawerActivity.class));
-        }else if(item.getItemId() == R.id.logout){
-            Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+        }else if(item.getItemId() == R.id.floating_menu){
+            startActivity(new Intent(MainActivity.this, FloatingMenuActivity.class));
+            Toast.makeText(MainActivity.this, "CLick foating button for floating menu", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
