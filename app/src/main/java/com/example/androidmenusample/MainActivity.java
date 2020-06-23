@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         }else if(item.getItemId() == R.id.floating_menu){
             startActivity(new Intent(MainActivity.this, FloatingMenuActivity.class));
             Toast.makeText(MainActivity.this, "CLick foating button for floating menu", Toast.LENGTH_SHORT).show();
+        }else if(item.getItemId() == R.id.popup){
+            startActivity(new Intent(MainActivity.this, PopUpMenuActivity.class));
+            Toast.makeText(MainActivity.this, "CLick me for popup menu", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
