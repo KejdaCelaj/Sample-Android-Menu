@@ -3,6 +3,7 @@ package com.example.androidmenusample;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.profile){
-            Toast.makeText(MainActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+        if(item.getItemId() == R.id.navigation_drawer_activity){
+            Toast.makeText(MainActivity.this, "Click the top left icon to display menu.", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(MainActivity.this, NavigationDrawerActivity.class));
         }else if(item.getItemId() == R.id.logout){
             Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
         }
